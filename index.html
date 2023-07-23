@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Responsive layout</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <style>
+        .container{
+            height: 100vh;
+            /* border: 2px solid rebeccapurple; */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 12px;
+        }
+        .one{
+            grid-row: 1 / 6;
+        }
+        .eleven, .twelve{
+            grid-column: 2 / 5;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <header>
+        <div class="container">
+            <div class="one">1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div class="eleven">11</div>
+            <div class="twelve">12</div>
+        </div>
+    </header>
 </body>
+
 </html>
