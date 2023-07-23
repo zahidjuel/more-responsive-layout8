@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collage-grid</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));          
+            grid-auto-flow: dense;
+            grid-gap: 3px;
+        }
+
+        .horizontal-big{
+            grid-column: auto / span 2;
+            grid-row: auto / span 2;
+        }
+
+        .vertical{
+            grid-row: auto / span 2;
+        }
+
+        .horizontal{
+            grid-column: auto / span 3;
+        }
+
+        .container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="horizontal-big" src="images/A.jpg" alt="">
+        <img src="images/B.jpg" alt="">
+        <img src="images/C.jpg" alt="">
+        <img class="horizontal" src="images/D.jpg" alt="">
+        <img class="vertical" src="images/E.jpg" alt="">
+        <img class="horizontal" src="images/F.jpg" alt="">
+        <img class="vertical" src="images/G.jpg" alt="">
+        <img src="images/H.jpg" alt="">
+    </div>
+</body>
+
+</html>
