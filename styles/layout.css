@@ -1,60 +1,71 @@
-.header, .nav, .main, .sidebar, .advertise, .footer{
+.header,
+.nav,
+.main,
+.sidebar,
+.advertise,
+.footer {
     background-color: bisque;
     border: 2px solid tomato;
     padding: 5px;
     border-radius: 5px;
 }
+
 .header {
-    grid-area: header;
-}
-.nav{
-    grid-area: nav;
-}
-.main{
-    grid-area: main;
-}
-.sidebar{
-    grid-area: sidebar;
-}
-.advertise{
-    grid-area: advertise;
-}
-.footer{
-    grid-area: footer;
+    grid-area: h;
 }
 
-.container{
+.nav {
+    grid-area: n;
+}
+
+.main {
+    grid-area: m;
+}
+
+.sidebar {
+    grid-area: s;
+}
+
+.advertise {
+    grid-area: a;
+}
+
+.footer {
+    grid-area: f;
+}
+
+.container {
     display: grid;
+    grid-template-columns: repeat(12, 1fr);
     gap: 20px;
-    grid-template-areas: 
-    "header  header  header  header"
-    "nav     main    main    sidebar"
-    "nav     main    main    advertise"
-    "footer  footer  footer  footer"
+    grid-template-areas:
+        "n n h h h h h h h h h h"
+        "n n m m m m m m m s s s"
+        "n n m m m m m m m a a a"
+        "f f f f f f f f f f f f"
     ;
 }
 
 @media screen and (max-width: 576px) {
-    .container{
-        grid-template-areas: 
-        "header"
-        
-        "nav"
-        "main"
-        "sidebar"
-        "advertise"
-        "footer"
+    .container {
+        grid-template-areas:
+        "h h h h h h h h h h h h"
+        "n n n n n n n n n n n n"
+        "m m m m m m m m m m m m"
+        "s s s s s s s s s s s s"
+        "a a a a a a a a a a a a"
+        "f f f f f f f f f f f f"
         ;
     }
 }
 
-@media screen and (min-width:576px) and (max-width:992px) {
-    .container{
-        grid-template-areas: 
-        "header header header"
-        "nav    nav     nav"
-        "sidebar main  main"
-        "advertise footer footer"
+@media screen and (min-width:576px) and (max-width:768px) {
+    .container {
+        grid-template-areas:
+            "n n n h h h h h h h h h"
+            "n n n m m m m m s s s s"
+            "n n n m m m m m a a a a"
+            "f f f f f f f f f f f f"
         ;
     }
 }
